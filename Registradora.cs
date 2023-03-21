@@ -58,5 +58,21 @@ namespace HolaMundo
         {
 
         }
+
+        private void btnFactNew_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(txtNomCliente.Text))
+            {
+                MessageBox.Show("Debe de ingresar un nombre de cliente!");
+            } else
+            {
+                gbFactura.Visible = true;
+                DateTime objFecha = dtpFecha.Value;
+                txtSalida.Text = "Factura de Compra:\r\n" +
+                    "Cliente: " + txtNomCliente.Text + "  Fecha: " + objFecha.Year +
+                        "/" + objFecha.Month + "/" + objFecha.Day + "  Sucursal: " +
+                            "\r\n" + lbSucursal.Text;
+            }
+        }
     }
 }

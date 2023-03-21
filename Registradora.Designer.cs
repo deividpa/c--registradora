@@ -47,7 +47,7 @@ namespace HolaMundo
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbSucursal = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomCliente = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnFactNew = new System.Windows.Forms.Button();
             this.btnFactCerrar = new System.Windows.Forms.Button();
@@ -193,7 +193,7 @@ namespace HolaMundo
             this.gbCliente.Controls.Add(this.btnFactCerrar);
             this.gbCliente.Controls.Add(this.btnFactNew);
             this.gbCliente.Controls.Add(this.dtpFecha);
-            this.gbCliente.Controls.Add(this.textBox1);
+            this.gbCliente.Controls.Add(this.txtNomCliente);
             this.gbCliente.Controls.Add(this.lbSucursal);
             this.gbCliente.Controls.Add(this.label6);
             this.gbCliente.Controls.Add(this.label5);
@@ -277,12 +277,12 @@ namespace HolaMundo
             this.lbSucursal.Size = new System.Drawing.Size(74, 64);
             this.lbSucursal.TabIndex = 3;
             // 
-            // textBox1
+            // txtNomCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNomCliente.Location = new System.Drawing.Point(100, 25);
+            this.txtNomCliente.Name = "txtNomCliente";
+            this.txtNomCliente.Size = new System.Drawing.Size(272, 20);
+            this.txtNomCliente.TabIndex = 4;
             // 
             // dtpFecha
             // 
@@ -299,6 +299,7 @@ namespace HolaMundo
             this.btnFactNew.TabIndex = 9;
             this.btnFactNew.Text = "Nueva Factura";
             this.btnFactNew.UseVisualStyleBackColor = true;
+            this.btnFactNew.Click += new System.EventHandler(this.btnFactNew_Click);
             // 
             // btnFactCerrar
             // 
@@ -543,7 +544,7 @@ namespace HolaMundo
         private System.Windows.Forms.Button btnFactCerrar;
         private System.Windows.Forms.Button btnFactNew;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomCliente;
         private System.Windows.Forms.ListBox lbSucursal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
