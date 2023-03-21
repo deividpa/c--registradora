@@ -39,16 +39,32 @@ namespace HolaMundo
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbFacturacion = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.gbFactura = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbSucursal = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.btnFactNew = new System.Windows.Forms.Button();
+            this.btnFactCerrar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
+            this.gbFacturacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbCliente.SuspendLayout();
+            this.gbFactura.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
             // 
-            this.gbLogin.Controls.Add(this.btnSalir);
             this.gbLogin.Controls.Add(this.pictureBox1);
+            this.gbLogin.Controls.Add(this.btnSalir);
             this.gbLogin.Controls.Add(this.btnBorrar);
             this.gbLogin.Controls.Add(this.btnEnviar);
             this.gbLogin.Controls.Add(this.label4);
@@ -57,7 +73,7 @@ namespace HolaMundo
             this.gbLogin.Controls.Add(this.label2);
             this.gbLogin.Location = new System.Drawing.Point(48, 81);
             this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Size = new System.Drawing.Size(714, 248);
+            this.gbLogin.Size = new System.Drawing.Size(714, 160);
             this.gbLogin.TabIndex = 0;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Iniciar Sesión";
@@ -135,26 +151,163 @@ namespace HolaMundo
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::HolaMundo.Properties.Resources.caja;
-            this.pictureBox1.Location = new System.Drawing.Point(553, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // gbFacturacion
             // 
-            this.gbFacturacion.Location = new System.Drawing.Point(48, 350);
+            this.gbFacturacion.Controls.Add(this.gbFactura);
+            this.gbFacturacion.Controls.Add(this.gbCliente);
+            this.gbFacturacion.Location = new System.Drawing.Point(48, 247);
             this.gbFacturacion.Name = "gbFacturacion";
-            this.gbFacturacion.Size = new System.Drawing.Size(714, 149);
+            this.gbFacturacion.Size = new System.Drawing.Size(714, 271);
             this.gbFacturacion.TabIndex = 2;
             this.gbFacturacion.TabStop = false;
             this.gbFacturacion.Text = "Facturación";
             this.gbFacturacion.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HolaMundo.Properties.Resources.caja;
+            this.pictureBox1.Location = new System.Drawing.Point(558, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // gbCliente
+            // 
+            this.gbCliente.Controls.Add(this.btnFactCerrar);
+            this.gbCliente.Controls.Add(this.btnFactNew);
+            this.gbCliente.Controls.Add(this.dtpFecha);
+            this.gbCliente.Controls.Add(this.textBox1);
+            this.gbCliente.Controls.Add(this.lbSucursal);
+            this.gbCliente.Controls.Add(this.label6);
+            this.gbCliente.Controls.Add(this.label5);
+            this.gbCliente.Controls.Add(this.label3);
+            this.gbCliente.Location = new System.Drawing.Point(12, 33);
+            this.gbCliente.Name = "gbCliente";
+            this.gbCliente.Size = new System.Drawing.Size(696, 111);
+            this.gbCliente.TabIndex = 0;
+            this.gbCliente.TabStop = false;
+            this.gbCliente.Text = "Cliente";
+            // 
+            // gbFactura
+            // 
+            this.gbFactura.Controls.Add(this.label9);
+            this.gbFactura.Controls.Add(this.label8);
+            this.gbFactura.Controls.Add(this.label7);
+            this.gbFactura.Location = new System.Drawing.Point(12, 150);
+            this.gbFactura.Name = "gbFactura";
+            this.gbFactura.Size = new System.Drawing.Size(696, 111);
+            this.gbFactura.TabIndex = 1;
+            this.gbFactura.TabStop = false;
+            this.gbFactura.Text = "Factura";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombre:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(24, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Fecha:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(399, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Sucursal:";
+            // 
+            // lbSucursal
+            // 
+            this.lbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSucursal.FormattingEnabled = true;
+            this.lbSucursal.ItemHeight = 15;
+            this.lbSucursal.Items.AddRange(new object[] {
+            "Medellín",
+            "Bello",
+            "Envigado",
+            "Itagüí"});
+            this.lbSucursal.Location = new System.Drawing.Point(480, 26);
+            this.lbSucursal.Name = "lbSucursal";
+            this.lbSucursal.Size = new System.Drawing.Size(74, 64);
+            this.lbSucursal.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(100, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(272, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(100, 64);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(272, 20);
+            this.dtpFecha.TabIndex = 5;
+            // 
+            // btnFactNew
+            // 
+            this.btnFactNew.Location = new System.Drawing.Point(581, 26);
+            this.btnFactNew.Name = "btnFactNew";
+            this.btnFactNew.Size = new System.Drawing.Size(109, 26);
+            this.btnFactNew.TabIndex = 9;
+            this.btnFactNew.Text = "Nueva Factura";
+            this.btnFactNew.UseVisualStyleBackColor = true;
+            // 
+            // btnFactCerrar
+            // 
+            this.btnFactCerrar.Location = new System.Drawing.Point(581, 64);
+            this.btnFactCerrar.Name = "btnFactCerrar";
+            this.btnFactCerrar.Size = new System.Drawing.Size(109, 26);
+            this.btnFactCerrar.TabIndex = 10;
+            this.btnFactCerrar.Text = "Cerrar Factura";
+            this.btnFactCerrar.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(24, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Productos:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(272, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 20);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Valor:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(529, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 20);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Cantidad:";
             // 
             // Registradora
             // 
@@ -170,7 +323,12 @@ namespace HolaMundo
             this.Text = "Caja Registradora";
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
+            this.gbFacturacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbCliente.ResumeLayout(false);
+            this.gbCliente.PerformLayout();
+            this.gbFactura.ResumeLayout(false);
+            this.gbFactura.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,7 +345,20 @@ namespace HolaMundo
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox gbFacturacion;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox gbFactura;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox gbCliente;
+        private System.Windows.Forms.Button btnFactCerrar;
+        private System.Windows.Forms.Button btnFactNew;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox lbSucursal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }
