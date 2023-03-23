@@ -17,7 +17,7 @@ namespace HolaMundo
         double descuentoCajero = 0;
         double totalFactura = 0;
         double ivaFactura = 0;
-        double descuentoFactura = 0;*/
+        double descuentoFactura = 0;
 
         public Registradora()
         {
@@ -87,7 +87,18 @@ namespace HolaMundo
         {
             switch (cbProductos.Text)
             {
-
+                case "Papaya":
+                    txtFacturaValor.Text = "3000";
+                    break;
+                case "Manzana":
+                    txtFacturaValor.Text = "1500";
+                    break;
+                case "Pera":
+                    txtFacturaValor.Text = "2000";
+                    break;
+                case "Uva":
+                    txtFacturaValor.Text = "4000";
+                    break;
             }
         }
     }
