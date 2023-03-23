@@ -15,9 +15,9 @@ namespace HolaMundo
         double totalCajero = 0;
         double ivaCajero = 0;
         double descuentoCajero = 0;
-        double totalCajero = 0;
-        double totalCajero = 0;
-        double totalCajero = 0;
+        double totalFactura = 0;
+        double ivaFactura = 0;
+        double descuentoFactura = 0;*/
 
         public Registradora()
         {
@@ -61,11 +61,6 @@ namespace HolaMundo
                 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFactNew_Click(object sender, EventArgs e)
         {
             if(String.IsNullOrEmpty(txtNomCliente.Text))
@@ -74,17 +69,26 @@ namespace HolaMundo
             } else
             {
                 gbFactura.Visible = true;
+                // Se reinician variables de factura
+                totalFactura = 0;
+                ivaFactura = 0;
+                descuentoFactura = 0;
                 DateTime objFecha = dtpFecha.Value;
                 txtSalida.Text = "Factura de Compra:\r\n" +
                     "Cliente: " + txtNomCliente.Text + "  Fecha: " + objFecha.Year +
                         "/" + objFecha.Month + "/" + objFecha.Day + "  Sucursal: " +
                             "\r\n" + lbSucursal.Text;
+                txtSalida.AppendText("\r\nProducto\tValor\t+" +
+                    "Cantidad\tDescuento\tIVA\tSubtotal");
             }
         }
 
-        private void Registradora_Load(object sender, EventArgs e)
+        private void cbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (cbProductos.Text)
+            {
 
+            }
         }
     }
 }

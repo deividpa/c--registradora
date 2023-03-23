@@ -329,9 +329,7 @@ namespace HolaMundo
             this.txtSalida.Name = "txtSalida";
             this.txtSalida.ReadOnly = true;
             this.txtSalida.Size = new System.Drawing.Size(512, 69);
-            this.txtSalida.TabIndex = 10;
-            this.txtSalida.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
+            this.txtSalida.TabIndex = 10;            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -371,6 +369,7 @@ namespace HolaMundo
             this.cbProductos.Name = "cbProductos";
             this.cbProductos.Size = new System.Drawing.Size(121, 21);
             this.cbProductos.TabIndex = 4;
+            this.cbProductos.SelectedIndexChanged += new System.EventHandler(this.cbProductos_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -509,7 +508,6 @@ namespace HolaMundo
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registradora";
             this.Text = "Caja Registradora";
-            this.Load += new System.EventHandler(this.Registradora_Load);
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
