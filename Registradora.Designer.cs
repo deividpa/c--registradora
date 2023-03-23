@@ -232,6 +232,7 @@ namespace HolaMundo
             this.btnPagar.TabIndex = 18;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnFacturaFin
             // 
@@ -241,6 +242,7 @@ namespace HolaMundo
             this.btnFacturaFin.TabIndex = 17;
             this.btnFacturaFin.Text = "Fin Factura";
             this.btnFacturaFin.UseVisualStyleBackColor = true;
+            this.btnFacturaFin.Click += new System.EventHandler(this.btnFacturaFin_Click);
             // 
             // cbIVA
             // 

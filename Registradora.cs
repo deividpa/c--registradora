@@ -127,9 +127,30 @@ namespace HolaMundo
                     "\t" + txtFacturaValor.Text + "\t" + numCantidad.Value + "\t" +
                         descuento + "\t" + IVA + "\t" + subTotal;
             totalFactura = totalFactura + subTotal;
+            descuentoFactura = descuentoFactura + descuento;
             ivaFactura = ivaFactura + IVA;
 
-        }   
-            
+        }
+
+        private void btnFacturaFin_Click(object sender, EventArgs e)
+        {
+            txtPagar.Visible = true;
+            btnPagar.Visible = true;
+            txtSalida.AppendText("\r\n\r\nEl total a pagar es de: " + totalFactura+"$"
+                + "\r\nEl descuento total es de: " + descuentoFactura + "$"
+                   + "\r\nEl total de IVA es de: " + ivaFactura + "$");
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            if(totalFactura <= Double.Parse(txtPagar.Text))
+            {
+                double devuelta = Double.Parse(txtPagar.Text) - totalFactura;
+                MessageBox.Show("Su devuelta es de: " + devuelta + "$");
+                totalCajero = totalCajero + totalFactura;
+                ivaCajero = ivaCajero + ivaFactura;
+                descuentoCajero = descuentoCajero + descuentoFactura;
+            }
+        }
     }
 }
