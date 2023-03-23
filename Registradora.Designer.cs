@@ -46,9 +46,9 @@ namespace HolaMundo
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnFacturaFin = new System.Windows.Forms.Button();
             this.cbIVA = new System.Windows.Forms.CheckBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radDesc = new System.Windows.Forms.RadioButton();
+            this.radDesc10 = new System.Windows.Forms.RadioButton();
+            this.radDesc5 = new System.Windows.Forms.RadioButton();
+            this.radDesc0 = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.numCantidad = new System.Windows.Forms.NumericUpDown();
             this.txtSalida = new System.Windows.Forms.TextBox();
@@ -194,9 +194,9 @@ namespace HolaMundo
             this.gbFactura.Controls.Add(this.btnPagar);
             this.gbFactura.Controls.Add(this.btnFacturaFin);
             this.gbFactura.Controls.Add(this.cbIVA);
-            this.gbFactura.Controls.Add(this.radioButton2);
-            this.gbFactura.Controls.Add(this.radioButton1);
-            this.gbFactura.Controls.Add(this.radDesc);
+            this.gbFactura.Controls.Add(this.radDesc10);
+            this.gbFactura.Controls.Add(this.radDesc5);
+            this.gbFactura.Controls.Add(this.radDesc0);
             this.gbFactura.Controls.Add(this.btnAgregar);
             this.gbFactura.Controls.Add(this.numCantidad);
             this.gbFactura.Controls.Add(this.txtSalida);
@@ -253,41 +253,40 @@ namespace HolaMundo
             this.cbIVA.Text = "IVA";
             this.cbIVA.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radDesc10
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(213, 81);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(50, 19);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "10%";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radDesc10.AutoSize = true;
+            this.radDesc10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radDesc10.Location = new System.Drawing.Point(213, 81);
+            this.radDesc10.Name = "radDesc10";
+            this.radDesc10.Size = new System.Drawing.Size(50, 19);
+            this.radDesc10.TabIndex = 15;
+            this.radDesc10.Text = "10%";
+            this.radDesc10.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radDesc5
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(168, 81);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 19);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "5%";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radDesc5.AutoSize = true;
+            this.radDesc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radDesc5.Location = new System.Drawing.Point(168, 81);
+            this.radDesc5.Name = "radDesc5";
+            this.radDesc5.Size = new System.Drawing.Size(43, 19);
+            this.radDesc5.TabIndex = 14;
+            this.radDesc5.Text = "5%";
+            this.radDesc5.UseVisualStyleBackColor = true;
             // 
-            // radDesc
+            // radDesc0
             // 
-            this.radDesc.AutoSize = true;
-            this.radDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radDesc.Location = new System.Drawing.Point(123, 81);
-            this.radDesc.Name = "radDesc";
-            this.radDesc.Size = new System.Drawing.Size(43, 19);
-            this.radDesc.TabIndex = 13;
-            this.radDesc.TabStop = true;
-            this.radDesc.Text = "0%";
-            this.radDesc.UseVisualStyleBackColor = true;
+            this.radDesc0.AutoSize = true;
+            this.radDesc0.Checked = true;
+            this.radDesc0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radDesc0.Location = new System.Drawing.Point(123, 81);
+            this.radDesc0.Name = "radDesc0";
+            this.radDesc0.Size = new System.Drawing.Size(43, 19);
+            this.radDesc0.TabIndex = 13;
+            this.radDesc0.TabStop = true;
+            this.radDesc0.Text = "0%";
+            this.radDesc0.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
@@ -297,6 +296,7 @@ namespace HolaMundo
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // numCantidad
             // 
@@ -328,8 +328,10 @@ namespace HolaMundo
             this.txtSalida.Multiline = true;
             this.txtSalida.Name = "txtSalida";
             this.txtSalida.ReadOnly = true;
+            this.txtSalida.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtSalida.Size = new System.Drawing.Size(512, 69);
-            this.txtSalida.TabIndex = 10;            // 
+            this.txtSalida.TabIndex = 10;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -354,6 +356,7 @@ namespace HolaMundo
             // 
             this.txtFacturaValor.Location = new System.Drawing.Point(319, 32);
             this.txtFacturaValor.Name = "txtFacturaValor";
+            this.txtFacturaValor.ReadOnly = true;
             this.txtFacturaValor.Size = new System.Drawing.Size(105, 20);
             this.txtFacturaValor.TabIndex = 5;
             // 
@@ -557,9 +560,9 @@ namespace HolaMundo
         private System.Windows.Forms.Button btnPagar;
         private System.Windows.Forms.Button btnFacturaFin;
         private System.Windows.Forms.CheckBox cbIVA;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radDesc;
+        private System.Windows.Forms.RadioButton radDesc10;
+        private System.Windows.Forms.RadioButton radDesc5;
+        private System.Windows.Forms.RadioButton radDesc0;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.NumericUpDown numCantidad;
     }

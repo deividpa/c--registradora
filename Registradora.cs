@@ -101,5 +101,29 @@ namespace HolaMundo
                     break;
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            double subTotal = 0, descuento = 0, IVA = 0;
+            subTotal = Double.Parse(txtFacturaValor.Text)*(double)numCantidad.Value;
+            if(radDesc10.Checked == true)
+            {
+                descuento = subTotal * 10 / 100;
+            } else if(radDesc5.Checked == true)
+            {
+                descuento = subTotal * 5 / 100;
+            } else
+            {
+                descuento = subTotal;
+            }
+
+            if(cbIVA.Checked == true)
+            {
+                IVA = (subTotal - descuento) * 19 / 100; 
+            }
+
+            subTotal = subTotal - descuento + IVA;
+        }   
+            
     }
 }
