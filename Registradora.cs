@@ -50,6 +50,7 @@ namespace HolaMundo
                     {
                         gbLogin.Enabled = false;
                         gbFacturacion.Visible = true;
+                        gbCliente.Enabled = true;
                         MessageBox.Show("Bienvenido al sistema de facturación." + 
                             txtUsuario.Text);
                     } else
@@ -150,7 +151,32 @@ namespace HolaMundo
                 totalCajero = totalCajero + totalFactura;
                 ivaCajero = ivaCajero + ivaFactura;
                 descuentoCajero = descuentoCajero + descuentoFactura;
+                gbFactura.Visible = false;
+                gbCliente.Visible = true;
+                txtSalida.Clear();
+
+                // Se invisiblizan botones y caja de texto de pago, al momento de
+                // finalizar una compra
+                btnPagar.Visible = false;
+                txtPagar.Visible = false;
+            } else
+            {
+                MessageBox.Show("El valor de pago es insuficiente.");
             }
+
+        }
+
+        private void btnFactCerrar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Total producido caja: " + totalCajero + "$"
+                + "\r\nTotal descuento caja: " + descuentoCajero + "$"
+                    +"\r\nTotal iva caja: " + ivaCajero + "$");
+            totalCajero = 0;
+            descuentoCajero = 0;
+            ivaCajero = 0;
+            gbFactura.Visible = false;
+            gbLogin.Enabled = true;
+            txtSalida.Clear();
         }
     }
 }

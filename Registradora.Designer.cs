@@ -220,9 +220,9 @@ namespace HolaMundo
             this.txtPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPagar.Location = new System.Drawing.Point(581, 165);
             this.txtPagar.Name = "txtPagar";
-            this.txtPagar.ReadOnly = true;
             this.txtPagar.Size = new System.Drawing.Size(109, 21);
             this.txtPagar.TabIndex = 19;
+            this.txtPagar.Visible = false;
             // 
             // btnPagar
             // 
@@ -232,6 +232,7 @@ namespace HolaMundo
             this.btnPagar.TabIndex = 18;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Visible = false;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnFacturaFin
@@ -416,6 +417,7 @@ namespace HolaMundo
             this.gbCliente.Controls.Add(this.label6);
             this.gbCliente.Controls.Add(this.label5);
             this.gbCliente.Controls.Add(this.label3);
+            this.gbCliente.Enabled = false;
             this.gbCliente.Location = new System.Drawing.Point(12, 33);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(696, 111);
@@ -429,8 +431,9 @@ namespace HolaMundo
             this.btnFactCerrar.Name = "btnFactCerrar";
             this.btnFactCerrar.Size = new System.Drawing.Size(109, 26);
             this.btnFactCerrar.TabIndex = 10;
-            this.btnFactCerrar.Text = "Cerrar Factura";
+            this.btnFactCerrar.Text = "Cerrar Facturación";
             this.btnFactCerrar.UseVisualStyleBackColor = true;
+            this.btnFactCerrar.Click += new System.EventHandler(this.btnFactCerrar_Click);
             // 
             // btnFactNew
             // 
