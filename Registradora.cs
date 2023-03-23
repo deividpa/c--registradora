@@ -12,6 +12,13 @@ namespace HolaMundo
 {
     public partial class Registradora : Form
     {
+        double totalCajero = 0;
+        double ivaCajero = 0;
+        double descuentoCajero = 0;
+        double totalCajero = 0;
+        double totalCajero = 0;
+        double totalCajero = 0;
+
         public Registradora()
         {
             InitializeComponent();
@@ -73,6 +80,11 @@ namespace HolaMundo
                         "/" + objFecha.Month + "/" + objFecha.Day + "  Sucursal: " +
                             "\r\n" + lbSucursal.Text;
             }
+        }
+
+        private void Registradora_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
