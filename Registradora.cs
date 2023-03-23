@@ -79,7 +79,7 @@ namespace HolaMundo
                         "/" + objFecha.Month + "/" + objFecha.Day + "  Sucursal: " +
                             "\r\n" + lbSucursal.Text;
                 txtSalida.AppendText("\r\nProducto\tValor\t+" +
-                    "Cantidad\tDescuento\tIVA\tSubtotal");
+                    "Cant\tDesc\tIVA\tSubtotal");
             }
         }
 
@@ -123,6 +123,12 @@ namespace HolaMundo
             }
 
             subTotal = subTotal - descuento + IVA;
+            txtSalida.Text = txtSalida.Text + "\r\n" + cbProductos.Text +
+                    "\t" + txtFacturaValor.Text + "\t" + numCantidad.Value + "\t" +
+                        descuento + "\t" + IVA + "\t" + subTotal;
+            totalFactura = totalFactura + subTotal;
+            ivaFactura = ivaFactura + IVA;
+
         }   
             
     }
