@@ -33,5 +33,10 @@ namespace HolaMundo
             objR.MdiParent = this;
             objR.Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
