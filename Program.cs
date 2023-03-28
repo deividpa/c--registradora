@@ -16,7 +16,7 @@ namespace HolaMundo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registradora());
+            Application.Run(new Principal());
         }
     }
 }
